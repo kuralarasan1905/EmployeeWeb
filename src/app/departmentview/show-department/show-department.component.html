@@ -1,0 +1,47 @@
+<div>    
+    <div class="dep">
+        <table>            
+            <tr *ngIf="isError"> 
+                <td>
+                    <Label style="font-family: verdana;font-weight: bold; color:red">
+                        {{errorMessage}}
+                    </Label>
+                </td>
+            </tr>
+            <tr class="firstrow">
+                <td class="onaddDep">
+                    <button  class="editButton" mat-raised-button color="primary" (click)=" onaddClicked()">Add New Department</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="deptb" style="border-collapse:collapse;" border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Department Name</th>
+                                <th>Location</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of departmentList; let i=index" [ngStyle]="{'background-color':getBackGroundColor(i)}">
+                                <td>{{i+1}}</td>
+                                <td>{{data.departmentName}}</td>
+                                <td>{{data.location}}</td>
+                                <td>
+                                    <button (click)="onEditClicked(data.departmentId)" mat-raised-button color="accent" class="editButton">Edit</button>
+                                </td>
+                                <td>
+                                    <button type="button" (click)="onDeleteClicked(data.departmentId)" mat-raised-button color="warn" class="deleteButton">Delete</button>
+                                </td>            
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

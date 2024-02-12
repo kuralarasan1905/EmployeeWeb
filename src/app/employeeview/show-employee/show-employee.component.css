@@ -1,0 +1,47 @@
+.tablepos
+{
+    padding-left: 300px
+}
+.Addbutton{
+    text-align: right;
+}
+.add-employee{
+    background-color: brown;
+}
+.add-employee:hover{
+    background-color: green;
+    color: white;
+}
+
+.deleteButton{
+    background-color: brown;
+    color: white;
+}
+
+.deleteButton:hover{
+    background-color: red;
+    color: white;
+}
+
+.editButton{
+    background-color: blue;
+    color: white;
+}
+
+.editButton:hover{
+    background-color: green;
+    color: white;
+}
+
+td{
+    padding: 5px;
+    font-family: verdana;
+}
+
+th{
+    padding: 5px;
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+    background-color: #DFEB35;
+}

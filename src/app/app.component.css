@@ -1,0 +1,24 @@
+.app{
+    background-color: rgb(237, 217, 217);
+    background: color size 50px;
+} 
+.component{
+    background-color: beige;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+h1{
+    color: black;
+    font-size: 2pc;
+}
+
+.employeeButton:hover{    
+    background-color: green;
+    color: white;
+}
+
+.departmentButton:hover{
+    background-color: green;
+    color: white;
+}
