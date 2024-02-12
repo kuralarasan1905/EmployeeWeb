@@ -1,0 +1,65 @@
+<div>
+    <form [formGroup]="employeeForm" (ngSubmit)="SaveData()">
+        <div class="tablepos">
+            <table style="margin-left: 200px;"> 
+                <tr>
+                     <td>                    
+                        <label >First Name:</label> 
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter FirstName" formControlName="firstName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>                    
+                        <label >Last Name:</label>
+                    </td>
+                    <td>                    
+                        <input type="text" placeholder="Enter LastName" formControlName="lastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>                    
+                        <label >Date Of Birth:</label>
+                    </td>
+                    <td>                    
+                        <input type="date" name="dateOfBirth" formControlName="dateOfBirth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>                    
+                        <label >Department Name:</label>
+                    </td>
+                    <td>  
+                        <select formControlName="department">
+                            <option [value]="0">Not Selected</option>
+                            <option *ngFor="let data of department" [value]="data.departmentId">{{data.departmentName}}</option>
+                        </select>                  
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>                    
+                        <label >Annual Salary:</label>
+                    </td>
+                    <td>                    
+                        <input type="text" placeholder="AnnualSalary" formControlName="annualSalary">
+                    </td>
+                </tr>
+                <tr> 
+                     <td class="Submit">
+                        <button class="add-employee" mat-raised-button color="primary" type="submit">{{employeeId == 0 ? 'Add Employees':'Update Employees'}}</button>
+                    </td>
+                </tr> 
+                <tr></tr>
+                <tr *ngIf="isError"> 
+                    <td>
+                        <Label style="font-family: verdana;font-weight: bold; color:red">
+                            {{errorMessage}}
+                        </Label>
+                    </td>
+                </tr>
+            </table>    
+        </div>
+    </form>
+</div>
